@@ -24,12 +24,18 @@ namespace WpfApp1.Windows
             InitializeComponent();
         }
 
-        private void bankAccount_Click(object sender, RoutedEventArgs e)
+        private void productsList_Click(object sender, RoutedEventArgs e)
         {
-            BankAccoutView accView = new BankAccoutView();
-            accView.ShowDialog();
+            ProductsListView viewProducts = new ProductsListView();
+            viewProducts.Show();
         }
 
-       
+        private void MainGrid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                DragMove();
+            }
+        }
     }
 }
