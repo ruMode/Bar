@@ -15,21 +15,18 @@ using System.Windows.Shapes;
 namespace WpfApp1.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для AddEmployeeWndw.xaml
+    /// Логика взаимодействия для AddDrink.xaml
     /// </summary>
-    public partial class SupplierViewInfo : Window
+    public partial class BankAccoutView : Window
     {
-        public SupplierViewInfo()
+        public BankAccoutView()
         {
             InitializeComponent();
         }
 
-        private void bankAccount_Click(object sender, RoutedEventArgs e)
+        private void Save_Click(object sender, RoutedEventArgs e)
         {
-            BankAccoutView accView = new BankAccoutView();
-            accView.ShowDialog();
-        }
 
-       
+        }
     }
 }

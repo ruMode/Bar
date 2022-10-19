@@ -43,12 +43,13 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
 
-                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1" Width="1240">
-                        <TextBlock x:Name="lastName" Text=" Last Name" FontSize="16" FontFamily="OpenSans Light" Margin="20 10"/>
-                        <TextBlock x:Name="name" Text="Name" FontSize="16" FontFamily="OpenSans Light" Margin="20 10"/>
-                        <TextBlock x:Name="patronymic" Text="Patronymic" FontSize="16" FontFamily="OpenSans Light" Margin="20 10"/>
+                    <StackPanel Grid.Column="1">
+                        <TextBlock x:Name="title" Grid.Column="1" Text=" Supplier Title" FontSize="16" FontFamily="OpenSans Light" Margin="20 10"
+                                   Style="{DynamicResource MaterialDesignButtonTextBlock}"/>
+                        <TextBlock x:Name="phone" Grid.Column="1" Text=" Phone" FontSize="16" FontFamily="OpenSans Light" Margin="20 10"/>
                     </StackPanel>
-                    <TextBlock x:Name="post" Grid.Row="1" Grid.Column="1" Text="Post" FontSize="16" FontFamily="OpenSans Light" Margin="20 10"/>
+                    
+                    <TextBlock x:Name="address" Grid.Row="1" Grid.Column="1" Text="Address" FontSize="16" FontFamily="OpenSans Light" Margin="25 10"/>
                     <!--<materialDesign:PopupBox Grid.Column="2" Grid.RowSpan="2" VerticalAlignment="Center">
                         <StackPanel>
                             <Button Content="Delete"/>
@@ -57,7 +58,9 @@
 
                         </StackPanel>
                     </materialDesign:PopupBox>-->
-                    <materialDesign:PackIcon Grid.RowSpan="2" Kind="User" Width="100" Height="100"/>
+                    <materialDesign:PackIcon Grid.RowSpan="2" Kind="UserGroup" Width="100" Height="100"/>
+                    <Button x:Name="productsList" Content="Ассортимент товаров" Margin="0 30" Grid.Column="2" Grid.RowSpan="2"
+                        Click="productsList_Click"/>
                 </Grid>
             </ListViewItem>
         </ListView>

@@ -42,5 +42,11 @@ namespace WpfApp1.Pages
             SupplierViewInfo viewInfo = new SupplierViewInfo();
             viewInfo.ShowDialog();
         }
+
+        private void productsList_Click(object sender, RoutedEventArgs e)
+        {
+            ProductsListView productsView = new ProductsListView();
+            productsView.ShowDialog();
+        }
     }
 }
