@@ -1,0 +1,149 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Bar Management Studio" Height="900" Width="1600" ResizeMode="NoResize"
+        Background="Transparent" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Border CornerRadius="20" BorderBrush="Gray" BorderThickness=".3">
+        <Border.Background>
+            <LinearGradientBrush EndPoint="0.2,0.5" StartPoint="0.8,1">
+                <GradientStop Color="#FF33288B" Offset="0.3"/>
+                <GradientStop Color="#FF2281D1" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid>
+            <!--#region Разметка страницы-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!--#endregion-->
+            
+            <!--#region Тулбар-->
+            <Grid x:Name="WindowToolbarGrid" Grid.Row="0"
+                  MouseDown="WindowToolbarGrid_MouseDown" Background="Transparent">
+                <!-- <Image Source="/Assets/Images/barIcon.png"  Width="40" Height="40" HorizontalAlignment="Left" Margin="20 0" />-->
+                <Border Grid.Row="0" Background="Black" Opacity=".3" CornerRadius="20 20 0 0" Height="40">
+                    <StackPanel>
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                            <Button x:Name="MinimizedWindowBtn" 
+                                    Height="40" Width="40" 
+                                    Style="{DynamicResource MaterialDesignOutlinedSecondaryLightButton}"
+                                    Click="MinimizedWindowBtn_Click"
+                            >
+                                <materialDesign:PackIcon Kind="WindowMinimize" Foreground="WhiteSmoke" Width="30"
+                                                         Height="30" Margin="-10"/>
+                            </Button>
+                            <Button x:Name="FullScreenWindowBtn" 
+                                    Height="40" Width="40" Margin="20 0"
+                                    Style="{DynamicResource MaterialDesignOutlinedSecondaryLightButton}"
+                                    Click="FullScreenWindowBtn_Click"
+                            >
+                                <materialDesign:PackIcon Kind="Fullscreen" Foreground="WhiteSmoke" Width="30"
+                                                         Height="30" Margin="-10"
+                                />
+                            </Button>
+                            
+                            <Button x:Name="CloseWindowBtn" 
+                                    Height="40" Width="40" Margin="0 0 20 0"
+                                    Style="{DynamicResource MaterialDesignOutlinedSecondaryLightButton}"
+                                    Click="CloseWindowBtn_Click"
+                            >
+                                <materialDesign:PackIcon Kind="Close" Foreground="WhiteSmoke" Width="30"
+                                                         Height="30" Margin="-10"/>
+                            </Button>
+                        </StackPanel>
+
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <!--#endregion-->
+            
+            <!--#region Основная часть-->
+            <Grid Grid.Row="1" >
+                <!--#region Меню-->
+                <Grid x:Name="GridMenu" Width="250" HorizontalAlignment="Left" Background="Black" Opacity=".3" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="BEER SPIRIT" Height="40" Width="auto" HorizontalAlignment="Left" Margin="35 0"
+                               Foreground="Yellow" FontSize="30" FontFamily="Open Sans" FontStretch="ExtraExpanded" FontWeight="ExtraBold"
+                    />
+
+                    <ListView  Grid.Row="1">
+                        <ListViewItem x:Name="employeesLVI" Height="75" Width="200" HorizontalAlignment="Center" Margin="0 10"
+                                      Selected="EmployeesLVI_Selected">
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Kind="Users" Width="30" Height="30" VerticalAlignment="Center"/>
+                                <TextBlock Text="Сотрудники" VerticalAlignment="Center"
+                                           FontSize="24" FontFamily="Open sans light"
+                                           Margin="10 0"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="drinksLVI" Height="75" Width="200" HorizontalAlignment="Center" Margin="0 10"
+                                      Selected="DrinksLVI_Selected">
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Kind="Drink" Width="30" Height="30" VerticalAlignment="Center"/>
+                                <TextBlock Text="Напитки" VerticalAlignment="Center"
+                                           FontSize="24" FontFamily="Open sans light"
+                                           Margin="10 0"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="snacksLVI" Height="75" Width="200" HorizontalAlignment="Center" Margin="0 10" 
+                                      Selected="snacksLVI_Selected">
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Kind="Food" Width="30" Height="30" VerticalAlignment="Center"/>
+                                <TextBlock Text="Закуски" VerticalAlignment="Center"
+                                           FontSize="24" FontFamily="Open sans light"
+                                           Margin="10 0"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="suppliersLVI" Height="75" Width="200" HorizontalAlignment="Center" Margin="0 10"
+                                      Selected="suppliersLVI_Selected" >
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Kind="UserGroup" Width="30" Height="30" VerticalAlignment="Center"/>
+                                <TextBlock Text="Поставщики" VerticalAlignment="Center"
+                                           FontSize="24" FontFamily="Open sans light"
+                                           Margin="10 0"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="documentsLVI" Height="75" Width="200" HorizontalAlignment="Center" Margin="0 10"
+                                      Selected="documentsLVI_Selected">
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Kind="FileDocument" Width="30" Height="30" VerticalAlignment="Center"/>
+                                <TextBlock Text="Документы" VerticalAlignment="Center"
+                                           FontSize="24" FontFamily="Open sans light"
+                                           Margin="10 0"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="settingsLVI" Height="75" Width="200" HorizontalAlignment="Center" Margin="0 10"
+                                      Selected="settingsLVI_Selected">
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Kind="Settings" Width="30" Height="30" VerticalAlignment="Center"/>
+                                <TextBlock Text="Настройки" VerticalAlignment="Center"
+                                           FontSize="24" FontFamily="Open sans light"
+                                           Margin="10 0"/>
+                            </StackPanel>
+                        </ListViewItem>
+                    </ListView>
+                </Grid>
+                <!--#endregion-->
+                
+                <!--#region Фрейм-->
+                <Frame x:Name="frameMain" Margin="250 0 0 0" NavigationUIVisibility="Hidden">
+                    
+                </Frame>
+                <!--#endregion-->
+                
+            </Grid>
+            <!--#endregion-->
+        </Grid>
+    </Border>
+</Window>
