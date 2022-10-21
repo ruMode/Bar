@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:WpfApp1.Windows"
         mc:Ignorable="d"
         Title="AddDrink" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="Transparent">
-    <Border CornerRadius="20" BorderBrush="Gray" BorderThickness=".3">
+    <Border x:Name="MainGrid" CornerRadius="20" BorderBrush="Gray" BorderThickness=".3" MouseDown="MainGrid_MouseDown">
         <Border.Background>
             <LinearGradientBrush EndPoint="0.2,0.5" StartPoint="0.8,1">
                 <GradientStop Color="#FF33288B" Offset="0.3"/>
@@ -43,15 +43,15 @@
 
             <TextBox x:Name="title" Grid.Column="1" 
                 Text="" FontSize="16" FontFamily="OpenSans Light" Margin="20 10" 
-                     Foreground="White" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"
+                     Foreground="White" VerticalAlignment="Center" TextWrapping="Wrap"
                      materialDesign:HintAssist.Hint="Название"/>
             <TextBox x:Name="servingSize" Grid.Column="2" 
                 Text="" FontSize="16" FontFamily="OpenSans Light" Margin="20 10" 
-                     Foreground="White" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"
+                     Foreground="White" VerticalAlignment="Center" TextWrapping="Wrap"
                      materialDesign:HintAssist.Hint="Размер порции"/>
             <TextBox x:Name="reciepe" Grid.Column="1" Grid.Row="1"
                 Text="" FontSize="16" FontFamily="OpenSans Light" Margin="20 10" 
-                     Foreground="White" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"
+                     Foreground="White" VerticalAlignment="Center" TextWrapping="Wrap"
                      materialDesign:HintAssist.Hint="Рецепт"/>
 
 

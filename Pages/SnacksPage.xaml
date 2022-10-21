@@ -53,7 +53,7 @@
 
                         </StackPanel>
                     </materialDesign:PopupBox>-->
-                    <materialDesign:PackIcon Grid.RowSpan="2" Kind="Drink" Width="100" Height="100"/>
+                    <materialDesign:PackIcon Grid.RowSpan="2" Kind="Food" Width="100" Height="100"/>
                 </Grid>
             </ListViewItem>
         </ListView>

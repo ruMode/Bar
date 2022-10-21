@@ -38,5 +38,12 @@ namespace WpfApp1.Windows
             ProductsListView view = new ProductsListView();
             view.Show();
         }
+        private void MainGrid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                DragMove();
+            }
+        }
     }
 }

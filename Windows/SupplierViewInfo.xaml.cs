@@ -27,7 +27,7 @@ namespace WpfApp1.Windows
         private void productsList_Click(object sender, RoutedEventArgs e)
         {
             ProductsListView viewProducts = new ProductsListView();
-            viewProducts.Show();
+            viewProducts.ShowDialog();
         }
 
         private void MainGrid_MouseDown(object sender, MouseButtonEventArgs e)

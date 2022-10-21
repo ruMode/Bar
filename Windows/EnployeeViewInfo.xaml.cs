@@ -23,5 +23,12 @@ namespace WpfApp1.Windows
         {
             InitializeComponent();
         }
+        private void MainGrid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                DragMove();
+            }
+        }
     }
 }

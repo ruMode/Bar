@@ -44,20 +44,20 @@
 
             <TextBox x:Name="title" Grid.Column="1" 
                 Text="" FontSize="16" FontFamily="OpenSans Light" Margin="20 10" 
-                     Foreground="White" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"
+                     Foreground="White" VerticalAlignment="Center" TextWrapping="Wrap"
                      materialDesign:HintAssist.Hint="Поставщик"/>
             <TextBox x:Name="address" Grid.Column="2" 
                 Text="" FontSize="16" FontFamily="OpenSans Light" Margin="20 10" 
-                     Foreground="White" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"
+                     Foreground="White" VerticalAlignment="Center" TextWrapping="Wrap"
                      materialDesign:HintAssist.Hint="Почтовый адрес"/>
             <TextBox x:Name="phone" Grid.Column="3" 
                 Text="" FontSize="16" FontFamily="OpenSans Light" Margin="20 10" 
-                     Foreground="White" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"
+                     Foreground="White" VerticalAlignment="Center" TextWrapping="Wrap"
                      materialDesign:HintAssist.Hint="Телефон"/>
             
             <TextBox x:Name="fax" Grid.Column="1" Grid.Row="1" 
                 Text="" FontSize="16" FontFamily="OpenSans Light" Margin="20 10" 
-                     Foreground="White" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"
+                     Foreground="White" VerticalAlignment="Center" TextWrapping="Wrap"
                      materialDesign:HintAssist.Hint="Факс"/>
             <TextBox x:Name="email" Grid.Column="2" Grid.Row="1" 
                 Text="" FontSize="16" FontFamily="OpenSans Light" Margin="20 10" 
