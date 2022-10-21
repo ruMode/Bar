@@ -32,5 +32,11 @@ namespace WpfApp1.Windows
           
             
         }
+
+        private void productsList_Click(object sender, RoutedEventArgs e)
+        {
+            ProductsListView view = new ProductsListView();
+            view.Show();
+        }
     }
 }
