@@ -22,11 +22,13 @@ namespace WpfApp1.Windows
         public ProductsListView()
         {
             InitializeComponent();
+      
+
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-
+          
         }
 
         private void MouseDown(object sender, MouseButtonEventArgs e)
